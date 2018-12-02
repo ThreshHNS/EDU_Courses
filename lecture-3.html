@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Технологии интернета и Web</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Университет ИТМО" width="300">
+      </a>
+      <p class="username">Конспект курса от <b>Андрея Вельца</b></p>
+    </header>
+
+    <main>
+      <div class="lecture-banner lecture-3-banner">
+        <h1>Лекция «Технологии интернета и Web»</h1>
+      </div>
+
+      <section class="summary">
+        <h2>Конспект</h2>
+
+        <h3>Краткое содержание</h3>
+
+        <p>Основными характеристиками информации с точки зрения ее безопасности принято считать:
+        <ul> 
+          <li><b>Конфиденциальность</b></li>
+          <li><b>Целостность</b></li>
+          <li><b>Доступность</b></li>  
+        </ul></br>
+        Эти три параметра называют триадой информационной безопасности и в английской аббревиатуре они легко запоминаются как сокращение одной очень известной организации – <b>CIA ( Confidentiality< Integrity, Accessability).</b> <br><br>
+
+        Имеется пять основных уровней представления информации:
+        <ul> 
+          <li><b>Уровень носителей информации</b></li>
+          <li><b>Уровень средств взаимодействия с носителем информации</b></li>
+          <li><b>Логический уровень</b></li>
+          <li><b>Синтаксический уровень</b></li> 
+          <li><b>Семантический уровень.</b></li>      
+        </ul><br>
+
+        Наиболее известным и старым способом защиты конфиденциальности информации является ее шифрование. Основными элементами процесса шифрования является исходный текст, ключи для шифрации и дешифрации, и алгоритмы шифрования и дешифрации. Алгоритмы шифрования и дешифрации не являются секретными и, значит, известны всем. Очевидно, что в таком случае, наибольшую ценность представляет ключ для дешифрации, который и принято называть <b>секретным ключом</b>.  </br></br>
+        Системы шифрования, в которых ключ шифрования и дешифрации совпадают,либо ключ дешифрации легко (без какой-либо секретной информации) получается из ключа шифрования принято называть симметричными. Несимметричные системы шифрования предполагают наличие некоторой секретной информации (потайной двери – <b>“trap door”</b>) зная которую можно вычислить секретный ключ из ключа шифрования. </br></br>
+
+        Принято говорить о двух вариантах симметричного шифрования – <b>блоковом и потоковом</b>. В первом случае ключ шифрования остается неизменным в процессе шифрации, в то время как во втором он постоянно меняется. </br></br>
+
+        В 1919 <b>Вернам</b> запатентовал систему автоматического шифрования телеграфных сообщений, в которой каждый символ в сообщении преобразовывался побитовым XOR (исключающее ИЛИ) с ключом записанным на бумажной ленте. исключающее ИЛИ) с ключом записанным на бумажной ленте. </br></br>
+
+        В 1946 году, используя идею шифра Вернама, <b>Клод Шенон</b> определил так называемый «совершенный» шифр, использующий для каждого нового сообщения новый случайный ключ, причем длина такого ключа совпадала с длиной шифруемого сообщения. Среди блоковых шифров определяют два вида –шифры подстановки (исключающее ИЛИ) с ключом записанным на бумажной ленте. замены) и перестановки. </br></br>
+
+       <b>Несимметричная криптография</b> появилась значительно позже симметричной и первые открытые публикации датируются 1976 годом.</br>
+       <b>Алгоритм WCEWCE</b>, предложенный Malcolm Williamson, Clifford Cocks и James Ellis был опубликован в 2010 году и создатели получили престижную награду Milestone Award Института IEEE (Великобритания) и лишь 18 декабря 1997года, CliffordIEEE) за развитие криптографии с открытым ключом.</br></br>
+
+       В 1978 году Дональд Райвест, Ади Шамир и Леонард Адлеман запатентовали и опубликовали свой алгоритм, получивший в дальнейшем название <b>RSA</b>. Как он работает вы можете найти в конце статьи в разделе "Полезные ссылки".</br></br>
+       В том же номере журнала, известный математик и ученый Мартин Гарднер посогласию с авторами алгоритма, опубликовал математическую задачу, получившую название RSA-129.</br></br>
+       В условии задачи он указал два числа n - открытый ключ и e - зашифрованный текст.</br>
+       Длина числа n составляла 129 десятичных знаков, а число e = 1007 знаков. За расшифровку текста предполагалась премия в 100 долларов! Шифр удалось взломать через 17 лет - около 600 человек объединились в сеть и усилиями 1600 компьютеров за полгода смогли прочитать в 1995 году фразу:</br></br>
+      <b>«The Magic Words are Squesmish Ossifrage» = «Волшебные слова - этобрезгливая скопа».</b></br>
+        </p>
+
+        <h3>Ответы на вопросы:</h3>
+
+        <p>Где сейчас используется алгоритм шифрования RSA?</p>
+        <blockquote>
+         Криптосистема RSA стала первой системой, пригодной и для шифрования, и для цифровой подписи. Алгоритм используется в большом числе криптографических приложений, включая <a href="https://ru.wikipedia.org/wiki/PGP">PGP</a>, <a href="https://ru.wikipedia.org/wiki/S/MIME">S/MIME</a>, <a href="https://ru.wikipedia.org/wiki/TLS">TLS/SSL</a>, <a href="https://ru.wikipedia.org/wiki/IPsec">IPSEC/IKE</a> и других.
+        </blockquote>
+
+        <p>Что такое хэш-функция?</p>
+        <blockquote>
+          Когда говорят про электронную подпись, то обязательно упоминается некоторая
+          однонаправленная функция - хэш-функция, позволяющая сообщение любого размера
+          преобразовать в "отпечаток" фиксированной длины (например - 256 бит). Такое
+          преобразование и выполняется с помощью хэш-функции.
+          В английском языке одним из значений слова "hash" является "путаница". И
+          действительно при выполнении хэш-преобразования исходная информация
+          "запутывается" так, что распутать(восстановить) ее обратно практически не
+          представляется возможным.
+        </blockquote>
+
+        <h3>Полезные ссылки:</h3>
+           <ul> 
+            <li><a href="https://ru.wikipedia.org/wiki/RSA">Что нужно знать об RSA?</a>
+            <li><a href="https://www.bytemag.ru/articles/detail.php?ID=6645">Современные алгоритмы шифрования</a></li> 
+          </ul>
+
+        <h3>Задания:</h3>
+          <div id="lessons">
+            
+          </div>  
+      </section>
+    </main>
+
+    <footer class="main-footer">    
+      <p>Санкт-Петербург, Университет ИТМО, 2018</p>
+      <p class="slogan"><img src="img/slogan.png" alt="It`s more than a University" width="200"></p>
+    </footer>
+
+    <!-- Load React. -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+        
+    <script type="text/babel">
+    class UserForm extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.state = {
+            user_answers: [],
+            answers: ["1", "RSA-129"]
+        };
+   
+        this.firstQuestion = this.firstQuestion.bind(this);
+        this.secondQuestion = this.secondQuestion.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      firstQuestion(e) {
+        var val = e.target.value;
+        this.setState({user_answers: [...this.state.user_answers, val]});
+      }
+      
+      secondQuestion(e) {
+        var val = e.target.value;
+        this.setState({user_answers: [...this.state.user_answers, val]});
+      }
+
+      handleSubmit(e) {
+        console.log(this.state.user_answers)
+        e.preventDefault();
+        if (this.state.user_answers[0] != this.state.answers[0]) {
+            alert("Неправильный ответ на 1 вопрос. Попробуйте еще раз!");
+        } else if (this.state.user_answers[1] != this.state.answers[1]) {
+            alert("Неправильный ответ на 2 вопрос. Попробуйте еще раз!");
+        } else {
+            alert("Правильно! 2/2");
+        }
+      }
+   
+      render() {
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <fieldset id="question1">
+                    <p>
+                      <label>Сколько используется ключей в симметричных криптосистемах для шифрования и дешифрования?</label><br />
+                      <input type="radio" value="1" name="question1" onChange={this.firstQuestion}/> 1
+                      <input type="radio" value="2" name="question1" onChange={this.firstQuestion}/> 2
+                      <input type="radio" value="3" name="question1" onChange={this.firstQuestion}/> 3
+                    </p>
+                </fieldset>
+                <fieldset id="question2">
+                    <p>
+                      <label>Как называлась первая математическая задача, основанная на RSA?</label><br />
+                      <input type="radio" value="RSA-129" name="question2" onChange={this.secondQuestion}/> RSA-129
+                      <input type="radio" value="Raivest-33" name="question2" onChange={this.secondQuestion}/> Raivest-33
+                      <input type="radio" value="SHAMIR-1" name="question2" onChange={this.secondQuestion}/> SHAMIR-1
+                    </p>
+                </fieldset>
+                <input type="submit" value="Отправить" />
+            </form>
+        );
+      }
+    }
+    ReactDOM.render(
+        <UserForm />,
+        document.getElementById("lessons")
+    )
+    </script>  
+  </body>
+</html>

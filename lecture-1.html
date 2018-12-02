@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Технологии интернета и Web</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Университет ИТМО" width="300">
+      </a>
+      <p class="username">Конспект курса от <b>Андрея Вельца</b></p>
+    </header>
+
+    <main>
+      <div class="lecture-banner lecture-1-banner">
+        <h1>Лекция «Технологии интернета и Web»</h1>
+      </div>
+
+      <section class="summary">
+        <h2>Конспект</h2>
+
+        <h3>Краткое содержание</h3>
+
+        <p>Веб-сервер получает запрос от пользователя благодаря службе доставки. Самая распространенная служба доставки — это так называемый протокол
+        TCP/IP, а передаются по этому протоколу HTTP-пакеты. HTTP-пакеты бывают двух видов: HTTP-запрос и HTTP-ответ, они отличаются набором заголовоков. У запросы есть самый главные заголовки:  
+        <ul> 
+          <li><b>HOST</b> ( имя сайта, которое нужно отдать )</li>
+          <li><b>Content-Type</b> ( вложенный HTML-код , который будет отображаться )</li> 
+        </ul></br>
+        Чтобы веб-разработчик сделал сайт, ему нужно использовать специальные инструменты. Одним из таких является браузер. Современные браузеры построены на движках <b>Blink</b> (Chrome, Opera), <b>Trident</b> (Internet Explorer) , <b>Gecko</b> (Firefox) и <b>Webkit</b> (Safari). <br><br>
+
+        Разработчик так же часто сталкиватеся с "инстурментами разработчика". С помощью него можно посмотреть код и проверить его прямо в браузере. Для создания макетов сайта в большинстве случаев используется <b>Photoshop</b>, но существует и бесплатный и удобный аналог - <b>GIMP</b>. <br><br>
+
+        Разработчики пишут свой код в текстовых редакторах. Текстовый редактор подбирается под желания и удобства разработчика индвидуально. Функциональными и практичными текстовыми редакторами можно назвать <b>Sublime</b>, <b>Brackets</b>, <b>Atom</b> и всеми любимый <b>Notepad++</b>, тут дело вкуса каждого. <br><br>
+
+        И последний отдельный инструмент - так называемые <b>онлайн-песочницы.</b> В них вы можете сохранять свой код и отправлять другому человеку, чтобы он запустил его у себя и помог вам разобраться, найти ошибки.</p>
+
+        <h3>Ответы на вопросы:</h3>
+
+        <p>Что такое браузер?</p>
+        <blockquote>
+          Браузерный движок — это библиотека, которая
+          отвечает за загрузку компонентов сайта, его ресурсов, и за отрисовку этих компонентов в
+          готовую страницу.
+        </blockquote>
+
+        <p>Что вообще видит бразуер, когда получает данные с сервера?</p>
+        <blockquote>
+          Первым, что увидит браузер, будет такая строчка:
+          HTTP/1.1. Это версия протокола HTTP. Дальше он увидит число, в данном случае это
+          число 200 и статус ОК. 200 - это тот самый статус HTTP-ответа. Может быть 200 вам не
+          означаетчень хорошо знаком, а статус 404 знаком каждому, это статус «страница не найдена». А
+          200 означает, что все хорошо, и сервер нам возвращает данные.
+        </blockquote>
+
+        <h3>Домашнее задание:</h3>    
+
+        <p class="homework">Попробуйте посмотреть как работают инстурменты разработчика в браузере. В разных браузерах они вызываются по-разному, это либо клавиша F12, либо «Просмотр кода элемента» в
+           контекстном меню. Так выглядит <b>Chrome Developer Tools</b>. Найдите этот текст в HTML коде и попробуйте изменить его CSS свойства на "color: <font color="red">red</font>". Вы увидите, как цвет текста изменится на <font color="red">красный</font>.</p>
+
+        <figure>
+          <figcaption>CSS код текста:</figcaption>
+          <pre><code> .homework {
+    color: #000;
+ }</code></pre>
+        </figure>
+
+        <h3>Полезные ссылки:</h3>
+           <ul> 
+            <li><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Как работает интернет?</a>
+            <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Введение_в_HTML/Начало_работы">Начало работы с HTML</a></li> 
+          </ul>
+
+        <h3>Задания:</h3>
+          <div id="lessons">
+            
+          </div>  
+      </section>
+    </main>
+
+    <footer class="main-footer">    
+      <p>Санкт-Петербург, Университет ИТМО, 2018</p>
+      <p class="slogan"><img src="img/slogan.png" alt="It`s more than a University" width="200"></p>
+    </footer>
+
+    <!-- Load React. -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+        
+    <script type="text/babel">
+    class UserForm extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.state = {
+            user_answers: [],
+            answers: ["Порт", "DOCTYPE"]
+        };
+   
+        this.firstQuestion = this.firstQuestion.bind(this);
+        this.secondQuestion = this.secondQuestion.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      firstQuestion(e) {
+        var val = e.target.value;
+        this.setState({user_answers: [...this.state.user_answers, val]});
+      }
+      
+      secondQuestion(e) {
+        var val = e.target.value;
+        this.setState({user_answers: [...this.state.user_answers, val]});
+      }
+
+      handleSubmit(e) {
+        console.log(this.state.user_answers)
+        e.preventDefault();
+        if (this.state.user_answers[0] != this.state.answers[0]) {
+            alert("Неправильный ответ на 1 вопрос. Попробуйте еще раз!");
+        } else if (this.state.user_answers[1] != this.state.answers[1]) {
+            alert("Неправильный ответ на 2 вопрос. Попробуйте еще раз!");
+        } else {
+            alert("Правильно! 2/2");
+        }
+      }
+   
+      render() {
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <fieldset id="question1">
+                    <p>
+                      <label>Как называется “номер программы” в операционной системе, на который она получает запросы по сети?</label><br />
+                      <input type="radio" value="IP-Адрес" name="question1" onChange={this.firstQuestion}/> IP-Адрес
+                      <input type="radio" value="Порт" name="question1" onChange={this.firstQuestion}/> Порт
+                      <input type="radio" value="Веб-адрес" name="question1" onChange={this.firstQuestion}/> Веб-адрес
+                    </p>
+                </fieldset>
+                <fieldset id="question2">
+                    <p>
+                      <label>С помощью какого кода объявляется тип HTML-документа?</label><br />
+                      <input type="radio" value="DOCTYPE" name="question2" onChange={this.secondQuestion}/> DOCTYPE
+                      <input type="radio" value="DOCVER" name="question2" onChange={this.secondQuestion}/> DOCVER
+                      <input type="radio" value="HTMLVER" name="question2" onChange={this.secondQuestion}/> HTMLVER
+                    </p>
+                </fieldset>
+                <input type="submit" value="Отправить" />
+            </form>
+        );
+      }
+    }
+    ReactDOM.render(
+        <UserForm />,
+        document.getElementById("lessons")
+    )
+    </script>  
+  </body>
+</html>
